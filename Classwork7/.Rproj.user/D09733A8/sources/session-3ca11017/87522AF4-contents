@@ -1,0 +1,16 @@
+data = read.csv("fl_student_survey.csv")
+head(data)
+mu = 3
+Xbar = mean(data$sports)
+t = (Xbar-mu)/sd(data$sports)/sqrt(nrow(data))
+t
+1-pt(t, nrow(data)-1) # p value
+?t.test
+
+t.test(
+  data$sports, y = NULL,
+  alternative =  "greater",
+  mu = 3,
+  conf.level = 0.95
+)
+

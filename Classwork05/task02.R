@@ -1,0 +1,14 @@
+# 7.10
+
+conf = 98
+sigma = 12
+x = c(21,12,3,47,8)
+n = length(x)
+
+z = qt(conf/100 + (1-conf/100)/2, n-1)
+
+z
+z * sigma/sqrt(n)
+
+# confidence interval (t)
+mean(x)+c(-1,1) * z * sigma/sqrt(n)

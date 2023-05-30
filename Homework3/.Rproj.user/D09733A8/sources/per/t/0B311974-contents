@@ -1,0 +1,17 @@
+n = 32
+Xbar = 1190
+miu = 1000
+alpha = 0.002
+sigma = 325
+
+Z = (Xbar - miu)/(sigma/sqrt(n))
+
+Z
+qnorm(0.98)
+
+if(Z<qnorm(0.98)){
+  print("reject")
+}else{
+  print("do not reject!")
+}
+

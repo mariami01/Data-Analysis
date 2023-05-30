@@ -1,0 +1,6 @@
+
+conf=60
+
+conf/100 + (1-conf/100)/2
+qnorm(conf/100 + (1-conf/100)/2)
+qt(conf/100 + (1-conf/100)/2,59)
